@@ -3,5 +3,601 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "beehive-RGB": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/beehive-rgb",
+      "sourceRoot": "projects/beehive-rgb/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/beehive-rgb",
+            "index": "projects/beehive-rgb/src/index.html",
+            "main": "projects/beehive-rgb/src/main.ts",
+            "polyfills": "projects/beehive-rgb/src/polyfills.ts",
+            "tsConfig": "projects/beehive-rgb/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-rgb/src/favicon.ico",
+              "projects/beehive-rgb/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-rgb/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/beehive-rgb/src/environments/environment.ts",
+                  "with": "projects/beehive-rgb/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "beehive-RGB:build:production"
+            },
+            "development": {
+              "browserTarget": "beehive-RGB:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beehive-RGB:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/beehive-rgb/src/test.ts",
+            "polyfills": "projects/beehive-rgb/src/polyfills.ts",
+            "tsConfig": "projects/beehive-rgb/tsconfig.spec.json",
+            "karmaConfig": "projects/beehive-rgb/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-rgb/src/favicon.ico",
+              "projects/beehive-rgb/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-rgb/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "beehive-RG": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/beehive-rg",
+      "sourceRoot": "projects/beehive-rg/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/beehive-rg",
+            "index": "projects/beehive-rg/src/index.html",
+            "main": "projects/beehive-rg/src/main.ts",
+            "polyfills": "projects/beehive-rg/src/polyfills.ts",
+            "tsConfig": "projects/beehive-rg/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-rg/src/favicon.ico",
+              "projects/beehive-rg/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-rg/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/beehive-rg/src/environments/environment.ts",
+                  "with": "projects/beehive-rg/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "beehive-RG:build:production"
+            },
+            "development": {
+              "browserTarget": "beehive-RG:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beehive-RG:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/beehive-rg/src/test.ts",
+            "polyfills": "projects/beehive-rg/src/polyfills.ts",
+            "tsConfig": "projects/beehive-rg/tsconfig.spec.json",
+            "karmaConfig": "projects/beehive-rg/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-rg/src/favicon.ico",
+              "projects/beehive-rg/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-rg/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "beehive-red": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/beehive-red",
+      "sourceRoot": "projects/beehive-red/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/beehive-red",
+            "index": "projects/beehive-red/src/index.html",
+            "main": "projects/beehive-red/src/main.ts",
+            "polyfills": "projects/beehive-red/src/polyfills.ts",
+            "tsConfig": "projects/beehive-red/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-red/src/favicon.ico",
+              "projects/beehive-red/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-red/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/beehive-red/src/environments/environment.ts",
+                  "with": "projects/beehive-red/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "beehive-red:build:production"
+            },
+            "development": {
+              "browserTarget": "beehive-red:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beehive-red:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/beehive-red/src/test.ts",
+            "polyfills": "projects/beehive-red/src/polyfills.ts",
+            "tsConfig": "projects/beehive-red/tsconfig.spec.json",
+            "karmaConfig": "projects/beehive-red/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-red/src/favicon.ico",
+              "projects/beehive-red/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-red/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "beehive-green": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/beehive-green",
+      "sourceRoot": "projects/beehive-green/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/beehive-green",
+            "index": "projects/beehive-green/src/index.html",
+            "main": "projects/beehive-green/src/main.ts",
+            "polyfills": "projects/beehive-green/src/polyfills.ts",
+            "tsConfig": "projects/beehive-green/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-green/src/favicon.ico",
+              "projects/beehive-green/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-green/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/beehive-green/src/environments/environment.ts",
+                  "with": "projects/beehive-green/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "beehive-green:build:production"
+            },
+            "development": {
+              "browserTarget": "beehive-green:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beehive-green:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/beehive-green/src/test.ts",
+            "polyfills": "projects/beehive-green/src/polyfills.ts",
+            "tsConfig": "projects/beehive-green/tsconfig.spec.json",
+            "karmaConfig": "projects/beehive-green/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-green/src/favicon.ico",
+              "projects/beehive-green/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-green/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "beehive-blue": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/beehive-blue",
+      "sourceRoot": "projects/beehive-blue/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/beehive-blue",
+            "index": "projects/beehive-blue/src/index.html",
+            "main": "projects/beehive-blue/src/main.ts",
+            "polyfills": "projects/beehive-blue/src/polyfills.ts",
+            "tsConfig": "projects/beehive-blue/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-blue/src/favicon.ico",
+              "projects/beehive-blue/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-blue/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/beehive-blue/src/environments/environment.ts",
+                  "with": "projects/beehive-blue/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "beehive-blue:build:production"
+            },
+            "development": {
+              "browserTarget": "beehive-blue:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "beehive-blue:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/beehive-blue/src/test.ts",
+            "polyfills": "projects/beehive-blue/src/polyfills.ts",
+            "tsConfig": "projects/beehive-blue/tsconfig.spec.json",
+            "karmaConfig": "projects/beehive-blue/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/beehive-blue/src/favicon.ico",
+              "projects/beehive-blue/src/assets"
+            ],
+            "styles": [
+              "projects/beehive-blue/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "lib-beehive-RG-shared": {
+      "projectType": "library",
+      "root": "projects/lib-beehive-rg-shared",
+      "sourceRoot": "projects/lib-beehive-rg-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-beehive-rg-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-beehive-rg-shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-beehive-rg-shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-beehive-rg-shared/src/test.ts",
+            "tsConfig": "projects/lib-beehive-rg-shared/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-beehive-rg-shared/karma.conf.js"
+          }
+        }
+      }
+    },
+    "lib-beehive-UI-shared": {
+      "projectType": "library",
+      "root": "projects/lib-beehive-ui-shared",
+      "sourceRoot": "projects/lib-beehive-ui-shared/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-beehive-ui-shared/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-beehive-ui-shared/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-beehive-ui-shared/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-beehive-ui-shared/src/test.ts",
+            "tsConfig": "projects/lib-beehive-ui-shared/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-beehive-ui-shared/karma.conf.js"
+          }
+        }
+      }
+    },
+    "lib-beehive-RGB": {
+      "projectType": "library",
+      "root": "projects/lib-beehive-rgb",
+      "sourceRoot": "projects/lib-beehive-rgb/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lib-beehive-rgb/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lib-beehive-rgb/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lib-beehive-rgb/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lib-beehive-rgb/src/test.ts",
+            "tsConfig": "projects/lib-beehive-rgb/tsconfig.spec.json",
+            "karmaConfig": "projects/lib-beehive-rgb/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }

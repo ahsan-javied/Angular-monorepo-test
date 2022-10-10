@@ -6,7 +6,17 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:beehive-blue": "ng serve --project=beehive-blue --port 4000",
+    "start:beehive-red": "ng serve --project=beehive-red --port 4100",
+    "start:beehive-green": "ng serve --project=beehive-green --port 4300",
+    "start:beehive-RGB": "ng serve --project=beehive-RGB --port 4400",
+    "start:beehive-RG": "ng serve --project=beehive-RG --port 4500",
+    "prod:build:beehive-blue": "ng build --prod --project beehive-blue --base-href /beehive-blue",
+    "prod:build:beehive-green": "ng build --prod --project beehive-green --base-href /beehive-green",
+    "prod:build:beehive-red": "ng build --prod --project beehive-red --base-href /beehive-red",
+    "prod:build:beehive-RG": "ng build --prod --project beehive-RG --base-href /beehive-RG",
+    "prod:build:beehive-RGB": "ng build --prod --project beehive-RGB --base-href /beehive-RGB"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +33,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.5",
     "@angular/cli": "~14.2.5",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
@@ -32,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "ng-packagr": "^14.2.0",
     "typescript": "~4.7.2"
   }
 }
